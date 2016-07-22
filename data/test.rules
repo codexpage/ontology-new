@@ -11,3 +11,6 @@
 #湿度
 [rule3:(?x ywx:humidity ?y),greaterThan(?y,60) -> (ywx:closehumidifierI ywx:associate ywx:newI)]
 [rule4:(?x ywx:humidity ?y),lessThan(?y,50) -> (ywx:openhumidifierI ywx:associate ywx:newI)]
+
+
+test
