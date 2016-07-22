@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#havehumiditysensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#havehumiditysensor">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#room"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#haveluminancesensor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#haveluminancesensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#haveluminancesensor">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#room"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#haveluminancesensor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#havepeoplesensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#havepeoplesensor">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#room"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#havepeoplesensor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#peoplesensor"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#havetempsensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#havetempsensor">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#room"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#havepeoplesensor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#tempsensor"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#dormid -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#dormid"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humidity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminance">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humidity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#numofpeople -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#numofpeople"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#storeid -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#storeid"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#temperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#temperature"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#dormitory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#dormitory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#new -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#new"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#openwindow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#openwindow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#peoplesensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#peoplesensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#room"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#sensors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#sensors">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#storeroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#storeroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#tempsensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#tempsensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#dom201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#dom201">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#dormitory"/>
+        <havetempsensor rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer1"/>
+        <dormid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">201</dormid>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#dom202 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#dom202">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#dormitory"/>
+        <havetempsensor rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer2"/>
+        <dormid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</dormid>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor"/>
+        <humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</humidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor"/>
+        <humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</humidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor"/>
+        <humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</humidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#humiditysensor"/>
+        <humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</humidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor"/>
+        <luminance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</luminance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor"/>
+        <luminance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</luminance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor"/>
+        <luminance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</luminance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#luminancesensor"/>
+        <luminance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</luminance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#psensor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#psensor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#peoplesensor"/>
+        <numofpeople rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</numofpeople>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#psensor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#psensor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#peoplesensor"/>
+        <numofpeople rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numofpeople>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#psensor3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#psensor3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#peoplesensor"/>
+        <numofpeople rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numofpeople>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#psensor4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#psensor4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#peoplesensor"/>
+        <numofpeople rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numofpeople>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#s203 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#s203">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#storeroom"/>
+        <havetempsensor rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer3"/>
+        <dormid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</dormid>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#s204 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#s204">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#storeroom"/>
+        <havetempsensor rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer4"/>
+        <dormid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204</dormid>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#tempsensor"/>
+        <temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,tempsensor,1</temperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#tempsensor"/>
+        <temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,tempsensor,2</temperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#tempsensor"/>
+        <temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,tempsensor,3</temperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#therometer4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/0/untitled-ontology-5#tempsensor"/>
+        <temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,tempsensor,1</temperature>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+

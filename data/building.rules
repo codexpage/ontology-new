@@ -1,0 +1,7 @@
+
+@prefix fa: <http://www.owl-ontologies.com/Expert.owl.owl#>.
+@include <RDFS>.
+@include <OWL>.
+@prefix ywx: <http://www.ywx.com#>
+
+[rule1:(?x ywx:temperature ?y),greaterThan(?y,30) -> (ywx:openwindowI ywx:associate ywx:newI)] 
