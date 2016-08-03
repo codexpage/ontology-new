@@ -1,12 +1,17 @@
 package dataCollector;
 
 import message.AppMessage;
+
+import java.math.BigDecimal;
+
 import file.FileOperator;
 import net.tinyos.message.Message;
 import net.tinyos.message.MessageListener;
 import net.tinyos.message.MoteIF;
 import net.tinyos.packet.BuildSource;
 import net.tinyos.util.PrintStreamMessenger;
+import tju.edu.model.temperaturesensor;
+import tju.edu.model.temperaturesensorDAO;
 
 /**
  * 
@@ -74,13 +79,23 @@ public class DataCollector implements MessageListener {
 				// v0 = val / 4096 * 3.0
 				// ppm = (v0 - 0.8)/3.2 * 1600 + 400
 				co2 = (appMsg.get_data1() / 4096 * 3.0 - 0.8) / 3.2 * 1600 + 400;
+				
 				FileOperator.writeFile(co2FilePathandName, System.currentTimeMillis()
 						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
 			} else if (appMsg.get_dataType() == 1) { // temperature
 				// temp = -39.60 + 0.01*val, powered by Batteries
 				// temp = -40.10 + 0.01*val, powered by USB
 				double tmp = appMsg.get_data1()*0.01-39.6;
+				
+				temperaturesensor tempsensor=new temperaturesensor();
+				temperaturesensorDAO tempDAO=new temperaturesensorDAO();
+				tempsensor.setSensorid(1);//No.1 sensor
+				BigDecimal   b   =   new   BigDecimal(tmp);  
+				tmp  =   b.setScale(2,   BigDecimal.ROUND_HALF_UP).doubleValue();  
+				tempsensor.setTemperature(tmp);
 				System.out.println("temp: "+tmp);
+				tempDAO.insert(tempsensor);//write into database
+				
 				FileOperator.writeFile(tempFilePathandName, System.currentTimeMillis()
 						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
 			} else if (appMsg.get_dataType() == 2) { // humidity
@@ -107,6 +122,8 @@ public class DataCollector implements MessageListener {
 //					+ System.getProperty("line.separator"));
 			System.out.println("data1:"+appMsg.get_data1() + "	data2:" + appMsg.get_data2() + "    type:" + appMsg.get_dataType()+"    count:"+appMsg.get_count()
 			+ System.getProperty("line.separator"));
+			
+			
 		}
 	}
 }
