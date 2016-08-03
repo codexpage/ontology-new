@@ -4,5 +4,6 @@
 	<classpathentry kind="lib" path="mariadb-java-client-1.1.7.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jena"/>
+	<classpathentry kind="lib" path="/Users/ywx/Documents/j2ee-neon-workspace/random/jamod-1.2-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

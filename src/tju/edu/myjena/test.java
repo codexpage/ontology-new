@@ -67,6 +67,8 @@ public class test {
 	public static void testQuery() {
 		String ruleFile = "file:./expert/Expert.rules";
 		String ontoFile = "file:./expert/Expert.owl";
+		
+		//查询sparql语句
 		String queryString = "PREFIX Expert:<http://www.owl-ontologies.com/Expert.owl#> " +
 	    	"SELECT ?expert ?subject " +
 	    	"WHERE {?expert Expert:familiar_with ?subject} ";

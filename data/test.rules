@@ -13,4 +13,3 @@
 [rule4:(?x ywx:humidity ?y),lessThan(?y,50) -> (ywx:openhumidifierI ywx:associate ywx:newI)]
 
 
-test
