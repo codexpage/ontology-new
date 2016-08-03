@@ -6,5 +6,11 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jena"/>
 	<classpathentry kind="lib" path="jamod-1.2-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="tinyos.jar"/>
+	<classpathentry kind="lib" path="lib/huelocalsdk.jar"/>
+	<classpathentry kind="lib" path="lib/huesdkresources.jar"/>
+	<classpathentry kind="lib" path="lib/modbus4J.jar"/>
+	<classpathentry kind="lib" path="lib/RXTXcomm.jar"/>
+	<classpathentry kind="lib" path="lib/seroUtils.jar"/>
+	<classpathentry kind="lib" path="lib/tablelayout.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
