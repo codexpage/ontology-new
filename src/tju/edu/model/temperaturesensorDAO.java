@@ -86,7 +86,7 @@ public class temperaturesensorDAO {
 					+ " and id >= all(select id from "+relation+" where sensorid="+id+");";
 			//在这里找到sendorid相同的数据中最新的一个
 
-			System.out.println(sql);
+//			System.out.println(sql);
 			stat = conn.createStatement();	
 			rs = stat.executeQuery(sql);
 			

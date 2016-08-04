@@ -6,7 +6,7 @@
 
 #温度
 [rule1:(?x ywx:temperature ?y),greaterThan(?y,30) -> (ywx:openwindowI ywx:associate ywx:newI)] 
-[rule2:(?x ywx:temperature ?y),lessThan(?y,20) -> (ywx:closewindowI ywx:associate ywx:newI)]
+[rule2:(?x ywx:temperature ?y),lessThan(?y,30) -> (ywx:closewindowI ywx:associate ywx:newI)]
 
 #湿度
 [rule3:(?x ywx:humidity ?y),greaterThan(?y,60) -> (ywx:closehumidifierI ywx:associate ywx:newI)]

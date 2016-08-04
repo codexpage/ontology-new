@@ -24,8 +24,8 @@ public class DBConnection {
 	}
 	public static void setDbUrl(String str){//bug:注意URL不能重复累加
 		DB_URL = base_URL + str;
-		System.out.println(DB_URL);
-		System.out.println("update:"+str);
+//		System.out.println(DB_URL);
+//		System.out.println("update:"+str);
 	}
 
 

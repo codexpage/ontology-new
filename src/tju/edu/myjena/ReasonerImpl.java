@@ -26,6 +26,8 @@ import org.apache.jena.shared.RulesetNotFoundException;
 import org.apache.jena.util.FileManager;
 import org.apache.jena.vocabulary.ReasonerVocabulary;
 
+import com.ics.modbus.MainBulbController;
+
 import tju.edu.model.humiditysensorDAO;
 import tju.edu.model.temperaturesensorDAO;
 
@@ -166,24 +168,27 @@ public class ReasonerImpl implements IReasoner {
 		}
 		while(stmtIter.hasNext()){
 			Statement s = stmtIter.nextStatement();
-			System.out.println(s.toString());
+//			System.out.println(s.toString());
+			
 //			System.out.println(s.getSubject().getLocalName());
 			String actionname = s.getSubject().getLocalName();
 			if(actionname.equals("openwindowI")){
+				MainBulbController.turnOn(3);
 				System.out.println("the window is going to open....done.");
 			}
 			else if(actionname.equals("closewindowI")){
+				MainBulbController.turnOff(3);
 				System.out.println("the window is going to close... done.");
 			}
 			else if(actionname.equals("openhumidifierI")){
-				System.out.println("the humidifier is going to open...done");
+//				System.out.println("the humidifier is going to open...done");
 			}
 			else if(actionname.equals("closehumidifierI")){
 				System.out.println("the humidifier is going to close....done");
 			}
 		}
 		
-		System.out.println("end.");
+		System.out.println("process_event_end.");
 	}
 	
 	private String[] getDBFromOnt(Model m,String a, String b){//从本体的位置获得数据库指针
@@ -221,14 +226,14 @@ public class ReasonerImpl implements IReasoner {
  		String relation=info[1];
  		String ID=info[2];
  		
- 		System.out.println("database:"+info[0]);
- 		System.out.println("relation:"+info[1]);
- 		System.out.println("ID:"+info[2]);
+// 		System.out.println("database:"+info[0]);
+// 		System.out.println("relation:"+info[1]);
+// 		System.out.println("ID:"+info[2]);
  		
 		temperaturesensorDAO tempDAO=new temperaturesensorDAO();
  	    
  		int rs=tempDAO.findAll(database,relation,Integer.parseInt(ID));//读取值
- 		System.out.println("rs:"+rs);
+ 		System.out.println("temp:"+rs);
  		
  		editOnt(m,rs,"therometer","temperature");//修改
  		
