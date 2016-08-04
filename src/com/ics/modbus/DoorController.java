@@ -33,7 +33,7 @@ public class DoorController {
 	public static void main(String args[]) 
 	{
 		unlock(Door.Door1);
-		lock(Door.Door1);
+//		lock(Door.Door1);
 	}
 	
 }

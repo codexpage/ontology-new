@@ -14,7 +14,8 @@ public class SimpleLightSwitch {
 		
 		//TVController.turnOff();
 		
-		PosterController.turnOff();
+//		PosterController.turnOff();
+		LightController.turnOff(0,1,8);
 		
 		//MainBulbController.turnOffAll();
 		

@@ -63,7 +63,7 @@ public class MainBulbController {
 	public static void main(String args[])
 	{
 	//	turnOnAll();
-	//	turnOffAll();
-		turnOff(3);
+		turnOffAll();
+//		turnOff(4);
 	}
 }
