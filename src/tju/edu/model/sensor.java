@@ -1,9 +1,20 @@
 package tju.edu.model;
 
-public class sensor {
-	private int type;
+public class sensor  {
+	private int type;// 0 represents double, 1 for int, 2 for bool
+	private String name;
 	private int sensorid;
 	private double value;
+
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	
 	public int getType() {
 		return type;

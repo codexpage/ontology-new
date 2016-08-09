@@ -10,42 +10,26 @@ import tju.edu.db.DBConnection;
 
 public class sensorDAO {
 
-	public void insert(sensor sen){
+	public void insert(sensor sen){//根据sen来判断写入的relation和value
+		//需要设置sensorid-第几号传感器 value-值统一double型 name-名称 
 		int sensorid = sen.getSensorid();
 		double value = sen.getValue();
-		
-		Connection conn = null;
-		PreparedStatement stat = null;
-
-		
-	}
-	public void insert(temperaturesensor temp) {
-	    int sensorid=temp.getSensorid();
-		double temperature=temp.getTemperature();
+	    int type = sen.getType();
+	    String name = sen.getName();
 		
 		Connection conn = null;
 		PreparedStatement stat = null;
 		try {
-			
-			DBConnection.setDbUrl("ontology");//这里是指定数据库的名字,这里先写死了，等会再修改 应该由owl总读取出来。
+			DBConnection.setDbUrl("ontology");// the name should read from database or owl
 			conn = DBConnection.getConnection();
-			
-			
-			String sql = 
-				"INSERT INTO tempsensor(sensorid,temperature) " + 
-				"VALUES (?, ?)";
-//			System.out.println(sql);
-			System.out.println("sensor");
-			System.out.println("sensor"+sensorid+":"+temperature);
+			//这里插入id和值 
+			String sql = "insert into "+ name +"sensor(sensorid,"+name+") values(?,?)";
+			System.out.println("sql:"+sql);
 			stat = conn.prepareStatement(sql);
 			stat.setInt(1, sensorid);
-			stat.setDouble(2,temperature);			
-			int res = stat.executeUpdate();			
-			assert res == 1;
-			
+			stat.setDouble(2, value);
 		} catch (SQLException e) {
-		   e.printStackTrace();
-		   
+			// TODO: handle exception
 		} finally {
 			try {
 				if (stat != null)
@@ -57,53 +41,31 @@ public class sensorDAO {
 		}
 	}
 	
-	public void read(temperaturesensor temp) {
-		int sensorid=temp.getSensorid();
+	public void read(sensor sen){//读值的时候必须要传入sensorid和name
+		int sensorid = sen.getSensorid();
+		String name = sen.getName();
 		
 		Connection conn = null;
 		PreparedStatement stat = null;
+		ResultSet rs = null;
+		double value = 0;
+		
 		try {
+			DBConnection.setDbUrl("ontology");//immutable database
 			conn = DBConnection.getConnection();
-			String sql = 
-					"select * from tempsensor where sensorid=? and id >= all(select id from tempsensor where sensorid=?);";
+//			选取id最大（最新）的某个id的传感器的值
+			String sql = "select * from "+name+"sensor where sensorid=? and id >= all(select id from"+name+"sensor where sensorid=?);";
 			stat = conn.prepareStatement(sql);
 			stat.setInt(1, sensorid);
 			stat.setInt(2, sensorid);
-			int res = stat.executeUpdate();			
-			//todo...
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-			
-	}
-	
-	public int findAll(String database,String relation,int id) {		
-		Connection conn = null;
-		Statement stat = null;
-		ResultSet rs = null;
-		int tmp = 0;
-		try {
-			DBConnection.setDbUrl(database);
-			conn = DBConnection.getConnection();
-			String sql = 
-					"select * from "+relation+" where sensorid="+id
-					+ " and id >= all(select id from "+relation+" where sensorid="+id+");";
-			//在这里找到sendorid相同的数据中最新的一个
-
-//			System.out.println(sql);
-			stat = conn.createStatement();	
-			rs = stat.executeQuery(sql);
-			
+			int res = stat.executeUpdate();
 			while (rs.next()) {
-				tmp=rs.getInt("temperature");
+				value = rs.getDouble(name);//列名
 				
 			}
 			
-		} catch (SQLException e) {
-		   e.printStackTrace();
-		   
+		} catch (Exception e) {
+			// TODO: handle exception
 		} finally {
 			try {
 				if (stat != null)
@@ -113,8 +75,66 @@ public class sensorDAO {
 			} catch (SQLException e) {
 			}
 		}
-		return tmp;
+		 
 	}
+	
+//	public void read(temperaturesensor temp) {
+//		int sensorid=temp.getSensorid();
+//		Connection conn = null;
+//		PreparedStatement stat = null;
+//		try {
+//			conn = DBConnection.getConnection();
+//			String sql = 
+//					"select * from tempsensor where sensorid=? and id >= all(select id from tempsensor where sensorid=?);";
+//			stat = conn.prepareStatement(sql);
+//			stat.setInt(1, sensorid);
+//			stat.setInt(2, sensorid);
+//			int res = stat.executeUpdate();			
+//			//todo...
+//			
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//			
+//	}
+//	
+//	public int findAll(String database,String relation,int id) {		
+//		Connection conn = null;
+//		Statement stat = null;
+//		ResultSet rs = null;
+//		int tmp = 0;
+//		try {
+//			DBConnection.setDbUrl(database);
+//			conn = DBConnection.getConnection();
+//			String sql = 
+//					"select * from "+relation+" where sensorid="+id
+//					+ " and id >= all(select id from "+relation+" where sensorid="+id+");";
+//			//在这里找到sendorid相同的数据中最新的一个
+//
+////			System.out.println(sql);
+//			stat = conn.createStatement();	
+//			rs = stat.executeQuery(sql);
+//			
+//			while (rs.next()) {
+//				tmp=rs.getInt("temperature");
+//				
+//			}
+//			
+//		} catch (SQLException e) {
+//		   e.printStackTrace();
+//		   
+//		} finally {
+//			try {
+//				if (stat != null)
+//					stat.close();
+//				if (conn != null)
+//					conn.close();
+//			} catch (SQLException e) {
+//			}
+//		}
+//		return tmp;
+//	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
