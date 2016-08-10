@@ -20,11 +20,11 @@ import tju.edu.model.temperaturesensorDAO;
 public class DataCollector implements MessageListener {
 
 	private MoteIF moteIF;
-	private final static String co2FilePathandName = "./data/co2.txt";
-	private final static String tempFilePathandName = "./data/temp.txt";
-	private final static String humiFilePathandName = "./data/humi.txt";
-	private final static String lightFilePathandName = "./data/light.txt";
-	private final static String infraFilePathandName = "./data/infra.txt";
+//	private final static String co2FilePathandName = "./data/co2.txt";
+//	private final static String tempFilePathandName = "./data/temp.txt";
+//	private final static String humiFilePathandName = "./data/humi.txt";
+//	private final static String lightFilePathandName = "./data/light.txt";
+//	private final static String infraFilePathandName = "./data/infra.txt";
 
 	public DataCollector(String source) {
 		if (source != null) {
