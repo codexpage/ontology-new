@@ -45,6 +45,7 @@ public class DataCollector implements MessageListener {
 	}
 
 	public static void main(String[] args) {
+		/*
 		FileOperator fileOperator = new FileOperator();
 		if (fileOperator.isFileExisted(co2FilePathandName) == false) {
 			fileOperator.cretaeFile(co2FilePathandName, "");
@@ -60,8 +61,8 @@ public class DataCollector implements MessageListener {
 		}
 		if (fileOperator.isFileExisted(infraFilePathandName) == false) {
 			fileOperator.cretaeFile(infraFilePathandName, "");
-		}
-
+		}*/
+		
 		DataCollector reader = new DataCollector("serial@/dev/ttyUSB0:telosb");
 
 		Message msg = new AppMessage();
@@ -76,33 +77,36 @@ public class DataCollector implements MessageListener {
 			AppMessage appMsg = (AppMessage) msg;
 
 			if (appMsg.get_dataType() == 0) { // CO2
+			
 				// v0 = val / 4096 * 3.0
 				// ppm = (v0 - 0.8)/3.2 * 1600 + 400
 				co2 = (appMsg.get_data1() / 4096 * 3.0 - 0.8) / 3.2 * 1600 + 400;
 				
-				FileOperator.writeFile(co2FilePathandName, System.currentTimeMillis()
-						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
+//				FileOperator.writeFile(co2FilePathandName, System.currentTimeMillis()
+//						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
 			} else if (appMsg.get_dataType() == 1) { // temperature
 				// temp = -39.60 + 0.01*val, powered by Batteries
 				// temp = -40.10 + 0.01*val, powered by USB
 				double tmp = appMsg.get_data1()*0.01-39.6;
 				
+				int id = appMsg.get_nodeId();
+				//写入
 				temperaturesensor tempsensor=new temperaturesensor();
 				temperaturesensorDAO tempDAO=new temperaturesensorDAO();
-				tempsensor.setSensorid(1);//No.1 sensor
+				tempsensor.setSensorid(id);//No.x sensor
 				BigDecimal   b   =   new   BigDecimal(tmp);  
 				tmp  =   b.setScale(2,   BigDecimal.ROUND_HALF_UP).doubleValue();  
 				tempsensor.setTemperature(tmp);
 				System.out.println("temp: "+tmp);
 				tempDAO.insert(tempsensor);//write into database
 				
-				FileOperator.writeFile(tempFilePathandName, System.currentTimeMillis()
-						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
+//				FileOperator.writeFile(tempFilePathandName, System.currentTimeMillis()
+//						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
 			} else if (appMsg.get_dataType() == 2) { // humidity
 				// Humi = -4 + 0.0405 * val + (-2.8 * 10^-6) * (val^2)
 				// Humi = (Temp - 25) * (0.01 + 0.00008 * valh) + Humi;
-				FileOperator.writeFile(humiFilePathandName, System.currentTimeMillis()
-						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
+//				FileOperator.writeFile(humiFilePathandName, System.currentTimeMillis()
+//						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
 			} else if (appMsg.get_dataType() == 3) { // light
 				// V0 = value / 4096 * 3.0
 				// I = V0 / 100,000
@@ -111,11 +115,11 @@ public class DataCollector implements MessageListener {
 				double lux = appMsg.get_data1()*3.0*769/4096.0;
 				System.out.println("light "+lux);
 				
-				FileOperator.writeFile(lightFilePathandName, System.currentTimeMillis()
-						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
+//				FileOperator.writeFile(lightFilePathandName, System.currentTimeMillis()
+//						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
 			} else if (appMsg.get_dataType() == 4) { // infra
-				FileOperator.writeFile(infraFilePathandName, System.currentTimeMillis()
-						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
+//				FileOperator.writeFile(infraFilePathandName, System.currentTimeMillis()
+//						+ "	" + appMsg.get_data1() + System.getProperty("line.separator"));
 			}
 
 //			System.out.println(System.currentTimeMillis() + "	" + appMsg.get_dataType() + "    " + appMsg.get_count()

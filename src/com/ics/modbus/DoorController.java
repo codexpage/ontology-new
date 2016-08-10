@@ -30,6 +30,23 @@ public class DoorController {
 		modbusUtil.writeCoil(master, 1, controlTable.get(door) , true);
 	}
 	
+	public synchronized static void unlockdoor(int id){
+		if(id == 1){
+			unlock(Door.Door1);
+		}
+		else if(id == 2){
+			unlock(Door.Door2);
+		}
+	}
+	public synchronized static void lockdoor(int id){
+		if(id == 1){
+			lock(Door.Door1);
+		}
+		else if(id == 2){
+			lock(Door.Door2);
+		}
+	}
+	
 	public static void main(String args[]) 
 	{
 		unlock(Door.Door1);

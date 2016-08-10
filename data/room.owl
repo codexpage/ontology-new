@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#"
+     xml:base="http://www.semanticweb.org/ywx/ontologies/2016/6/tju"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tju="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#associate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#associate"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#hasinfo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#hasinfo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#hasvalue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#hasvalue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#CO2sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#CO2sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#TV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#TV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#airconditioner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#airconditioner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#barlight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#barlight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#curtain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#curtain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#door -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#door">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#humiditysensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#humiditysensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#infraredsensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#infraredsensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#luminancesensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#luminancesensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#new -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#new"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#poster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#poster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#sensors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#sensors"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#temperaturesensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#temperaturesensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebulb1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebulb1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebulb2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebulb2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebulb3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebulb3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebulb4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebulb4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebulball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebulball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#newI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#newI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#new"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulb1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulb1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulb2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulb2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulb3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulb3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulb4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulb4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#bulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#temperaturesensor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#temperaturesensor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#temperaturesensor"/>
+        <hasinfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,temperaturesensor,2,temperature,1</hasinfo>
+        <hasvalue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27.0</hasvalue>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

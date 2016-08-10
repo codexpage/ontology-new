@@ -15,7 +15,7 @@ public class Process {
 	
 	public static void process_reasoner(){
 		//the path 
-		String ontoFile = "file:./data/test.owl";
+		String ontoFile = "file:./data/room.owl";
 		String ruleFile = "file:./data/test.rules";
 		
 		IReasoner Rea = ReasonerFactory.createReasoner();

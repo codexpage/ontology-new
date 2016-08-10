@@ -39,6 +39,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#hasinfo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#hasinfo"/>
+    
+
+
     <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#humidity -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#humidity"/>
@@ -263,6 +269,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#humansensor1">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#humansensor"/>
+        <hasinfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human info xjklj</hasinfo>
     </owl:NamedIndividual>
     
 
@@ -281,6 +288,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#lightsensor1">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#lightsensor"/>
+        <hasinfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lightsensor info xxxxx</hasinfo>
     </owl:NamedIndividual>
     
 
