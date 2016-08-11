@@ -369,6 +369,8 @@ public class ReasonerImpl implements IReasoner {
 //		Resource aa = m.getResource(NS + "");	
 			Statement s = stmtIter.nextStatement();
 			String str = s.getObject().toString();
+			String owlname = s.getSubject().getLocalName().toString();
+			System.out.println(owlname);
 //			System.out.println(str);
 			count ++;
 			String info[]=str.split(",");
@@ -388,7 +390,7 @@ public class ReasonerImpl implements IReasoner {
 	 		double value = sen.getValue();
 	 		System.out.println("value of "+name+"sensor: "+value);
 			//======写入=======
-	 		editOnt(m,value,name+"sensor","hasvalue");
+	 		editOnt(m,value,owlname,"hasvalue");
 	 		
 		}
 		System.out.println("sensor count: "+count);

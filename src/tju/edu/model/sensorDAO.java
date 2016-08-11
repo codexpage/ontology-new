@@ -53,23 +53,26 @@ public class sensorDAO {
 		PreparedStatement stat = null;
 		ResultSet rs = null;
 		double value = 0;
-		
 		try {
 			DBConnection.setDbUrl("ontology");//immutable database
 			conn = DBConnection.getConnection();
 //			选取id最大（最新）的某个id的传感器的值
-			String sql = "select * from "+name+"sensor where sensorid=? and id >= all(select id from"+name+"sensor where sensorid=?);";
+			String sql = "select * from "+name+"sensor where sensorid="+sensorid+" and id >="
+					+ " all(select id from "+name+"sensor where sensorid="+sensorid+");";
 			stat = conn.prepareStatement(sql);
-			stat.setInt(1, sensorid);
-			stat.setInt(2, sensorid);
-			int res = stat.executeUpdate();
+			System.out.println(stat);
+//			sql = "select * from temperaturesensor where sensorid=2 and id >= all(select id from temperaturesensor where sensorid=2);";
+			rs = stat.executeQuery(sql);
 			while (rs.next()) {
 				value = rs.getDouble(name);//列名
+				sen.setValue(value);
+//				System.out.println("senvalue: "+sen.getValue());
 				
 			}
 			
+			
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.err.println("read error");
 		} finally {
 			try {
 				if (stat != null)
@@ -144,10 +147,10 @@ public class sensorDAO {
 		sensor s = new sensor();
 		s.setName("temperature");
 		s.setSensorid(2);
-		s.setValue(32.0);
+//		s.setValue(32.0);
 		sensorDAO sDAO = new sensorDAO();
-		sDAO.insert(s);
-		System.out.println("done");
+		sDAO.read(s);
+		System.out.println(s.getValue());
 		
 	}
 
