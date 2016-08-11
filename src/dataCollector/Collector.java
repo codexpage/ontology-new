@@ -50,8 +50,9 @@ public class Collector implements MessageListener {
 		BigDecimal b = new BigDecimal(value); 
 		value = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
 		sen.setValue(value);
-		System.out.println("value :"+value);
+//		System.out.println("value :"+value);
 		senDAO.insert(sen);
+		System.out.println(sen.getName()+" "+sen.getSensorid()+" "+sen.getValue());
 	}
 
 	public void messageReceived(int i, Message msg) {

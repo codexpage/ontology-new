@@ -14,7 +14,7 @@ public class sensorDAO {
 		//需要设置sensorid-第几号传感器 value-值统一double型 name-名称 
 		int sensorid = sen.getSensorid();
 		double value = sen.getValue();
-	    int type = sen.getType();
+//	    int type = sen.getType();
 	    String name = sen.getName();
 		
 		Connection conn = null;
@@ -24,12 +24,16 @@ public class sensorDAO {
 			conn = DBConnection.getConnection();
 			//这里插入id和值 
 			String sql = "insert into "+ name +"sensor(sensorid,"+name+") values(?,?)";
-			System.out.println("sql:"+sql);
+//		System.out.println("sql:"+sql);
 			stat = conn.prepareStatement(sql);
 			stat.setInt(1, sensorid);
 			stat.setDouble(2, value);
+			
+			int res = stat.executeUpdate();			
+			assert res == 1;
 		} catch (SQLException e) {
 			// TODO: handle exception
+			System.err.println("insert error");
 		} finally {
 			try {
 				if (stat != null)
@@ -137,7 +141,14 @@ public class sensorDAO {
 //	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		sensor s = new sensor();
+		s.setName("temperature");
+		s.setSensorid(2);
+		s.setValue(32.0);
+		sensorDAO sDAO = new sensorDAO();
+		sDAO.insert(s);
+		System.out.println("done");
+		
 	}
 
 }
