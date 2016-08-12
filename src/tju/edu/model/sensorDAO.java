@@ -28,7 +28,7 @@ public class sensorDAO {
 			stat = conn.prepareStatement(sql);
 			stat.setInt(1, sensorid);
 			stat.setDouble(2, value);
-			System.out.println(stat);
+//			System.out.println(stat);
 			int res = stat.executeUpdate();			
 			assert res == 1;
 		} catch (SQLException e) {
@@ -144,13 +144,8 @@ public class sensorDAO {
 //	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		sensor s = new sensor();
-		s.setName("temperature");
-		s.setSensorid(2);
-//		s.setValue(32.0);
-		sensorDAO sDAO = new sensorDAO();
-		sDAO.read(s);
-		System.out.println(s.getValue());
+		double co2 = (619.0/4096 * 3.0 - 0.8) / 3.2 * 1600 + 400;
+		System.out.println(co2);
 		
 	}
 

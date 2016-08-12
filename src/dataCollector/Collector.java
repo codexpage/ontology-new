@@ -64,7 +64,7 @@ public class Collector implements MessageListener {
 			AppMessage appMsg = (AppMessage) msg;
 
 			if (appMsg.get_dataType() == 0) { // CO2
-				co2 = (appMsg.get_data1() / 4096 * 3.0 - 0.8) / 3.2 * 1600 + 400;//ppm
+				co2 = (appMsg.get_data1() / 4096.0 * 3.0 - 0.8) / 3.2 * 1600.0 + 400;//ppm
 				int id = appMsg.get_nodeId();
 				insertdata(id,co2,"CO2");
 			} else if (appMsg.get_dataType() == 1) { // temperature

@@ -11,7 +11,7 @@
  Target Server Version : 50621
  File Encoding         : utf-8
 
- Date: 08/12/2016 13:29:37 PM
+ Date: 08/12/2016 13:42:50 PM
 */
 
 SET NAMES utf8;
@@ -25,7 +25,7 @@ CREATE TABLE `CO2sensor` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sensorid` int(11) DEFAULT NULL,
   `CO2` double DEFAULT NULL,
-  `date` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -49,7 +49,7 @@ CREATE TABLE `infraredsensor` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sensorid` int(11) DEFAULT NULL,
   `infrared` double(11,0) DEFAULT NULL,
-  `date` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
