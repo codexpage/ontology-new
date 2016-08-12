@@ -18,8 +18,8 @@
 
 
 #CO2
-#[rule5:(ywx:CO2sensor1 ywx:hasvalue ?y),greaterThan(?y,700) ->]
-#[rule6:(ywx:CO2sensor1 ywx:hasvalue ?y),greaterThan(?y,700) ->]
+#[rule5:(ywx:CO2sensor1 ywx:hasvalue ?y),greaterThan(?y,700) ->(ywx:openbarlight ywx:associate ywx:newI)]
+#[rule6:(ywx:CO2sensor1 ywx:hasvalue ?y),greaterThan(?y,700) ->(ywx:closebarlight ywx:associate ywx:newI)]
 
 
 #infrared
