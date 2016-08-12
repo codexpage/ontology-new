@@ -13,13 +13,13 @@ public class Socketcontroller {
 //	private final static ModbusMaster master2=ModbusMasterFactory.createTcpMaster("192.168.1.202", 502);
 	private static Map<Integer,Integer> map = new HashMap<Integer,Integer>();
 	static{
-		map.put(2, 69);//bottom
+		map.put(3, 69);//2 bottom
 //		map.put(3, 70);
-		map.put(4, 71);//middle
+		map.put(2, 71);//4 middle
 		
 //		map.put(5, 64);
 //		map.put(6, 65);//on the floor
-		map.put(7, 66);//top
+		map.put(1, 66);//7 top
 //		map.put(8, 67);
 		
 	}

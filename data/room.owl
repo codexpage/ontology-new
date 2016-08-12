@@ -168,6 +168,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#action"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#temperaturesensor -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#temperaturesensor">
@@ -217,6 +225,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebarlight">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#barlight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebottomsocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebottomsocket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
     </owl:NamedIndividual>
     
 
@@ -285,6 +301,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closetopsocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closetopsocket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#colsemiddlesocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#colsemiddlesocket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#humiditysensor1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#humiditysensor1">
@@ -347,6 +379,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbottomsocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbottomsocket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulb1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbulb1">
@@ -403,10 +443,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openmiddlesocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openmiddlesocket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openposter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openposter">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#poster"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#opentopsocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#opentopsocket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
     </owl:NamedIndividual>
     
 
