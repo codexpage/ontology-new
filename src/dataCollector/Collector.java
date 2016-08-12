@@ -54,10 +54,12 @@ public class Collector implements MessageListener {
 		senDAO.insert(sen);
 		System.out.println(sen.getName()+" "+sen.getSensorid()+" "+sen.getValue());
 	}
-
+	
+	public double temp = -310;
+	
 	public void messageReceived(int i, Message msg) {
-		double co2, temp, humi, light , infra1, infra2;
-		temp = -310;
+		double co2, humi, light , infra1, infra2;
+//		temp = -310;
 		if (msg instanceof AppMessage) {
 			AppMessage appMsg = (AppMessage) msg;
 
@@ -76,13 +78,16 @@ public class Collector implements MessageListener {
 			} else if (appMsg.get_dataType() == 2) { // humidity
 				// Humi = -4 + 0.0405 * val + (-2.8 * 10^-6) * (val^2)
 				// Humi = (Temp - 25) * (0.01 + 0.00008 * valh) + Humi;
-				if(temp < -310){//必须要有温度传感器为前提
+				if(temp < -300){//必须要有温度传感器为前提
 					System.err.println("can't get effective temperature,can not calculate Humidity!");
 				}
 				else{
 					double data = appMsg.get_data1();
-					double value =  -4 + 0.0405 * data + (-2.8 * 10e-6) * (Math.pow(data, 2));
+					data = 1705;
+					double value =  -4 + 0.0405 * data + (-2.8 * 1e-6) * (Math.pow(data, 2));
 					value = (temp - 25)*(0.01 + 0.0008 * data)+value;
+					int id = appMsg.get_nodeId();
+					insertdata(id,value,"humidity");
 				}
 			} else if (appMsg.get_dataType() == 3) { // light
 				// V0 = value / 4096 * 3.0
