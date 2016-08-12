@@ -11,7 +11,7 @@
  Target Server Version : 50621
  File Encoding         : utf-8
 
- Date: 08/10/2016 22:57:31 PM
+ Date: 08/12/2016 13:29:37 PM
 */
 
 SET NAMES utf8;
@@ -22,7 +22,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `CO2sensor`;
 CREATE TABLE `CO2sensor` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `sensorid` int(11) DEFAULT NULL,
   `CO2` double DEFAULT NULL,
   `date` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
@@ -46,7 +46,7 @@ CREATE TABLE `humiditysensor` (
 -- ----------------------------
 DROP TABLE IF EXISTS `infraredsensor`;
 CREATE TABLE `infraredsensor` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `sensorid` int(11) DEFAULT NULL,
   `infrared` double(11,0) DEFAULT NULL,
   `date` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,

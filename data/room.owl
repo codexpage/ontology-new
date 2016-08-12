@@ -199,7 +199,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#CO2sensor1">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#CO2sensor"/>
-        <hasinfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,CO2sensor,5,CO2,0</hasinfo>
+        <hasinfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,CO2sensor,1,CO2,0</hasinfo>
         <hasvalue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">750.0</hasvalue>
     </owl:NamedIndividual>
     
@@ -225,14 +225,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebarlight">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#barlight"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebottomsocket -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closebottomsocket">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
     </owl:NamedIndividual>
     
 
@@ -301,17 +293,25 @@
     
 
 
-    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closetopsocket -->
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closesocket1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closetopsocket">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closesocket1">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#colsemiddlesocket -->
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closesocket2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#colsemiddlesocket">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closesocket2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closesocket3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#closesocket3">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
     </owl:NamedIndividual>
     
@@ -331,7 +331,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#infraredsensor1">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#infraredsensor"/>
-        <hasinfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,infraredsensor,4,infrared,3</hasinfo>
+        <hasinfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,infraredsensor,5,infrared,3</hasinfo>
         <hasvalue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3000.0</hasvalue>
     </owl:NamedIndividual>
     
@@ -375,14 +375,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbarlight">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#barlight"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbottomsocket -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openbottomsocket">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
     </owl:NamedIndividual>
     
 
@@ -443,14 +435,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openmiddlesocket -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openmiddlesocket">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openposter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#openposter">
@@ -459,10 +443,29 @@
     
 
 
-    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#opentopsocket -->
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#opensocket1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#opentopsocket">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#opensocket1">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">top</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#opensocket2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#opensocket2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">middle</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ywx/ontologies/2016/6/tju#opensocket3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#opensocket3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#socket"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bottom</rdfs:comment>
     </owl:NamedIndividual>
     
 
