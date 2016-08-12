@@ -28,7 +28,7 @@ public class sensorDAO {
 			stat = conn.prepareStatement(sql);
 			stat.setInt(1, sensorid);
 			stat.setDouble(2, value);
-			
+			System.out.println(stat);
 			int res = stat.executeUpdate();			
 			assert res == 1;
 		} catch (SQLException e) {
