@@ -6,11 +6,11 @@
 
 #温度
 #[rule1:(ywx:temperaturesensor1 ywx:hasvalue ?y),greaterThan(?y,30) -> (ywx:openairconditioner ywx:associate ywx:newI)] 
-#[rule2:(ywx:temperaturesensor1 ywx:hasvalue ?y),lessThan(?y,30) -> (ywx:closeairconditioner ywx:associate ywx:newI)]
+#[rule2:(ywx:temperaturesensor1 ywx:hasvalue ?y),lessThan(?y,27) -> (ywx:closeairconditioner ywx:associate ywx:newI)]
 
 #luminance
-#[rulel1:(ywx:luminancesensor1 ywx:hasvalue ?y),greaterThan(?y,350) -> (ywx:closebulball ywx:associate ywx:newI)]
-#[rulel2:(ywx:luminancesensor1 ywx:hasvalue ?y),lessThan(?y,200) -> (ywx:openbulball ywx:associate ywx:newI)]
+[rulel1:(ywx:luminancesensor1 ywx:hasvalue ?y),greaterThan(?y,350) -> (ywx:closebulball ywx:associate ywx:newI)]
+[rulel2:(ywx:luminancesensor1 ywx:hasvalue ?y),lessThan(?y,200) -> (ywx:openbulball ywx:associate ywx:newI)]
 
 #湿度
 #[rule3:(ywx:humiditysensor1 ywx:hasvalue ?y),greaterThan(?y,65) -> (ywx:closesocket3 ywx:associate ywx:newI)]
