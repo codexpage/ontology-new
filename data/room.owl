@@ -341,7 +341,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#luminancesensor1">
         <rdf:type rdf:resource="http://www.semanticweb.org/ywx/ontologies/2016/6/tju#luminancesensor"/>
-        <hasinfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,luminancesensor,3,luminance,4</hasinfo>
+        <hasinfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology,luminancesensor,4,luminance,4</hasinfo>
         <hasvalue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">500.0</hasvalue>
     </owl:NamedIndividual>
     
