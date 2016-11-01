@@ -288,7 +288,7 @@ public class ReasonerImpl implements IReasoner {
 			}
 
 			// 三个插座 从上到下1，2，3
-			for (int i = 1; i <= 3; i++) {
+			for (int i = 1; i <= 4; i++) {
 				if (actionname.equals("opensocket" + i)) {
 					try {
 						Socketcontroller.turnOn(i);

@@ -5,12 +5,15 @@
 
 
 #温度
-[rule1:(ywx:temperaturesensor1 ywx:hasvalue ?y),greaterThan(?y,30) -> (ywx:openairconditioner ywx:associate ywx:newI)] 
-[rule2:(ywx:temperaturesensor1 ywx:hasvalue ?y),lessThan(?y,27) -> (ywx:closeairconditioner ywx:associate ywx:newI)]
+#[rule1:(ywx:temperaturesensor1 ywx:hasvalue ?y),greaterThan(?y,24) -> (ywx:openairconditioner ywx:associate ywx:newI)] 
+#[rule2:(ywx:temperaturesensor1 ywx:hasvalue ?y),lessThan(?y,20) -> (ywx:closeairconditioner ywx:associate ywx:newI)]
 
 #luminance
-[rulel1:(ywx:luminancesensor1 ywx:hasvalue ?y),greaterThan(?y,350) -> (ywx:closebulball ywx:associate ywx:newI)]
-[rulel2:(ywx:luminancesensor1 ywx:hasvalue ?y),lessThan(?y,200) -> (ywx:openbulball ywx:associate ywx:newI)]
+#[rulel1:(ywx:luminancesensor1 ywx:hasvalue ?y),greaterThan(?y,350) -> (ywx:closebulball ywx:associate ywx:newI)]
+#[rulel2:(ywx:luminancesensor1 ywx:hasvalue ?y),lessThan(?y,200) -> (ywx:openbulball ywx:associate ywx:newI)]
+
+#[rulel1:(ywx:luminancesensor1 ywx:hasvalue ?y),greaterThan(?y,350) -> (ywx:closesocket4 ywx:associate ywx:newI)]
+#[rulel2:(ywx:luminancesensor1 ywx:hasvalue ?y),lessThan(?y,200) -> (ywx:opensocket4 ywx:associate ywx:newI)]
 
 #湿度
 #[rule3:(ywx:humiditysensor1 ywx:hasvalue ?y),greaterThan(?y,65) -> (ywx:closesocket3 ywx:associate ywx:newI)]
@@ -18,10 +21,19 @@
 
 
 #CO2
-#[rule5:(ywx:CO2sensor1 ywx:hasvalue ?y),greaterThan(?y,700) ->(ywx:openbarlight ywx:associate ywx:newI)]
-#[rule6:(ywx:CO2sensor1 ywx:hasvalue ?y),greaterThan(?y,700) ->(ywx:closebarlight ywx:associate ywx:newI)]
+[rule5:(ywx:CO2sensor1 ywx:hasvalue ?y),greaterThan(?y,1000) ->(ywx:openbarlight ywx:associate ywx:newI)]
+[rule6:(ywx:CO2sensor1 ywx:hasvalue ?y),lessThan(?y,1000) ->(ywx:closebarlight ywx:associate ywx:newI)]
 
 
 #infrared
-[rule7:(ywx:infraredsensor1 ywx:hasvalue ?y),greaterThan(?y,4000) -> (ywx:opensocket2 ywx:associate ywx:newI)]
-[rule8:(ywx:infraredsensor1 ywx:hasvalue ?y),lessThan(?y,4000) -> (ywx:closesocket2 ywx:associate ywx:newI)]
+#[rule7:(ywx:infraredsensor1 ywx:hasvalue ?y),greaterThan(?y,4000) -> (ywx:opensocket2 ywx:associate ywx:newI)]
+#[rule8:(ywx:infraredsensor1 ywx:hasvalue ?y),lessThan(?y,4000) -> (ywx:closesocket2 ywx:associate ywx:newI)]
+
+#[rule7:(ywx:infraredsensor1 ywx:hasvalue ?y),greaterThan(?y,4000) -> (ywx:rollup1 ywx:associate ywx:newI)]
+#[rule71:(ywx:infraredsensor1 ywx:hasvalue ?y),greaterThan(?y,4000) -> (ywx:rollup2 ywx:associate ywx:newI)]
+#[rule8:(ywx:infraredsensor1 ywx:hasvalue ?y),lessThan(?y,4000) -> (ywx:rolldown1 ywx:associate ywx:newI)]
+#[rule81:(ywx:infraredsensor1 ywx:hasvalue ?y),lessThan(?y,4000) -> (ywx:rolldown2 ywx:associate ywx:newI)]
+
+#[rule7:(ywx:infraredsensor1 ywx:hasvalue ?y),greaterThan(?y,4000) -> (ywx:openTV ywx:associate ywx:newI)]
+#[rule8:(ywx:infraredsensor1 ywx:hasvalue ?y),lessThan(?y,4000) -> (ywx:closeTV ywx:associate ywx:newI)]
+

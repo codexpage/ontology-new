@@ -25,4 +25,8 @@ public class TVController {
 	//	Thread.sleep(100);
 
 	}
+	
+	public static void main(String args[]) throws InterruptedException{
+		turnOff();
+	}
 }

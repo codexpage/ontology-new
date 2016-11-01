@@ -18,7 +18,7 @@ public class LightController {
 		for(int i=0;i<num;i++)
 		{
 			temp[start+i-1]=true;
-		}http://start.ubuntu.com/11.04/Google/?sourceid=hp
+		}  //http://start.ubuntu.com/11.04/Google/?sourceid=hp
 		modbusUtil.writeCoils(master, 1, s,temp);
 	}
 	
@@ -33,6 +33,9 @@ public class LightController {
 			temp[start+i-1]=false;
 		}
 		modbusUtil.writeCoils(master, 1, s,temp );
+	}
+	public static void main(String args[]){
+		turnOff(0,2,5);
 	}
 
 }

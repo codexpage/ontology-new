@@ -64,6 +64,6 @@ public class MainBulbController {
 	{
 //		turnOnAll();
 		turnOffAll();
-//		turnOff(4);
+//		turnOn(4);
 	}
 }

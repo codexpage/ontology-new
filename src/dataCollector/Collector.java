@@ -83,7 +83,7 @@ public class Collector implements MessageListener {
 				}
 				else{
 					double data = appMsg.get_data1();
-					data = 1705;
+//					data = 1705;
 					double value =  -4 + 0.0405 * data + (-2.8 * 1e-6) * (Math.pow(data, 2));
 					value = (temp - 25)*(0.01 + 0.0008 * data)+value;
 					int id = appMsg.get_nodeId();

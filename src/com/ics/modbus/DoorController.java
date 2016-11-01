@@ -49,8 +49,10 @@ public class DoorController {
 	
 	public static void main(String args[]) 
 	{
-		unlock(Door.Door1);
+//		unlock(Door.Door1);
 //		lock(Door.Door1);
+//		lockdoor(2);
+		unlockdoor(2);
 	}
 	
 }

@@ -61,9 +61,11 @@ public class CurtainController {
 	}
 	public static void main(String args[]) 
 	{
-//		up(new Curtain[]{Curtain.Cutain1});
-		Map<Integer,Curtain> map = new HashMap<Integer,Curtain>();
-		map.put(1, Curtain.Cutain1);
-		System.out.println(map.get(1));
+		stop(new Curtain[]{Curtain.Cutain1});
+		stop(new Curtain[]{Curtain.Cutain2});
+		
+//		Map<Integer,Curtain> map = new HashMap<Integer,Curtain>();
+//		map.put(1, Curtain.Cutain1);
+//		System.out.println(map.get(1));
 	}
 }
