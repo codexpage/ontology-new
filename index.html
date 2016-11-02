@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ontology-based Smart Home System : intelligent perceiving and controlling">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Ontology-based Smart Home System</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/codexpage/ontology-new">View on GitHub</a>
+
+          <h1 id="project_title">Ontology-based Smart Home System</h1>
+          <h2 id="project_tagline">intelligent perceiving and controlling</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/codexpage/ontology-new/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/codexpage/ontology-new/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>introduction</h2>
+
+<p>This project is a ontology-base implementation for smart home service using java. Data are automatically derived from telosb wirless sensor node with tinyos embeded system. Data is inferred based on customizable rules independant from the main system. The inferred conclusion will be listened and execuated using Modbus protocal through TCP.</p>
+
+<h2>
+<a id="ontology" class="anchor" href="#ontology" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ontology</h2>
+
+<p>Ontology formulate the room into abtract model and provide the inferrence engine to perform some intelligent self-controlling function. It can also seperate the rules from the main program, making it easier for updating and customization. </p>
+
+<h2>
+<a id="environment" class="anchor" href="#environment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>environment</h2>
+
+<p>The experiment was performed on Unbuntu 14.04 RTS, using a mysql database versioned 5.5.50 to store sensor data. You can find the sql file on the github. The Host machine should be in the same local network with modbus slave. And all the telosb node can be structure in a star topologic network. </p>
+
+<h2>
+<a id="experiment" class="anchor" href="#experiment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>experiment</h2>
+
+<p>In the experiment, we perform five automatic controlling examples. You can define your own complex logic rules to adjust to the environment.</p>
+
+<ul>
+<li>light sensor -&gt; lamp</li>
+<li>infrared sensor -&gt; curtain</li>
+<li>CO2 sensor -&gt; warning light</li>
+<li>thermal sensor -&gt; air conditioner</li>
+<li>infrared sensor -&gt; TV</li>
+</ul>
+
+<h2>
+<a id="video" class="anchor" href="#video" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>video</h2>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ontology-based Smart Home System maintained by <a href="https://github.com/codexpage">codexpage</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
